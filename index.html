@@ -7,7 +7,7 @@
 
 <title>Kruthi Foundation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,35 +19,56 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f5f7fb;
+background:#f4f6fb;
 color:#333;
-line-height:1.6;
 }
 
+/* HEADER */
+
 header{
-background:#1b4de4;
-color:white;
-padding:20px 8%;
+background:linear-gradient(90deg,#1b4de4,#4f8cff);
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+color:white;
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
 }
 
-header h2{
-font-weight:600;
+/* LOGO */
+
+.logo{
+display:flex;
+align-items:center;
+font-size:24px;
+font-weight:700;
+}
+
+.logo-circle{
+width:38px;
+height:38px;
+background:#ff6b35;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-right:10px;
+font-weight:bold;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
 font-weight:500;
 }
 
+/* HERO */
+
 .hero{
 height:85vh;
-background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url("https://images.unsplash.com/photo-1523240795612-9a054b0db644");
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1593113598332-cd59a93f9724");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -58,7 +79,7 @@ color:white;
 }
 
 .hero h1{
-font-size:50px;
+font-size:52px;
 margin-bottom:15px;
 }
 
@@ -68,18 +89,20 @@ font-size:18px;
 
 .btn{
 background:#ff6b35;
-padding:12px 25px;
-border-radius:6px;
-text-decoration:none;
+padding:12px 28px;
+border-radius:30px;
 color:white;
+text-decoration:none;
 display:inline-block;
 margin-top:20px;
 transition:0.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
+
+/* SECTIONS */
 
 section{
 padding:70px 10%;
@@ -87,9 +110,12 @@ padding:70px 10%;
 
 .section-title{
 text-align:center;
-font-size:32px;
+font-size:34px;
 margin-bottom:40px;
+font-weight:600;
 }
+
+/* ABOUT */
 
 .about{
 display:grid;
@@ -100,21 +126,26 @@ align-items:center;
 
 .about img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* IMPACT */
+
 .stats{
-background:#1b4de4;
-color:white;
 display:flex;
 justify-content:space-around;
-text-align:center;
+background:#1b4de4;
+color:white;
 padding:50px 0;
+text-align:center;
 }
 
 .stat h2{
-font-size:40px;
+font-size:42px;
 }
+
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -125,31 +156,45 @@ gap:25px;
 .card{
 background:white;
 padding:25px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 transition:0.3s;
 text-align:center;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+transform:translateY(-10px);
+box-shadow:0 15px 25px rgba(0,0,0,0.2);
 }
+
+/* GALLERY */
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
 }
 
 .gallery img{
 width:100%;
 border-radius:10px;
+transition:0.3s;
 }
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* DONATE */
 
 .donate{
 text-align:center;
+background:#eef3ff;
+border-radius:10px;
+padding:40px;
 }
+
+/* CONTACT */
 
 .contact{
 max-width:600px;
@@ -170,10 +215,12 @@ background:#1b4de4;
 color:white;
 padding:12px 25px;
 border:none;
-margin-top:10px;
 border-radius:6px;
+margin-top:10px;
 cursor:pointer;
 }
+
+/* FOOTER */
 
 footer{
 background:#111;
@@ -183,6 +230,8 @@ padding:20px;
 margin-top:40px;
 }
 
+/* MOBILE */
+
 @media(max-width:768px){
 
 .about{
@@ -191,11 +240,11 @@ grid-template-columns:1fr;
 
 .stats{
 flex-direction:column;
-gap:20px;
+gap:25px;
 }
 
 .hero h1{
-font-size:35px;
+font-size:34px;
 }
 
 }
@@ -208,7 +257,10 @@ font-size:35px;
 
 <header>
 
-<h2>Kruthi Foundation</h2>
+<div class="logo">
+<div class="logo-circle">K</div>
+Kruthi Foundation
+</div>
 
 <nav>
 
@@ -226,11 +278,11 @@ font-size:35px;
 
 <div>
 
-<h1>Empowering Communities</h1>
+<h1>Empowering Lives Across India</h1>
 
-<p>Together we can build a better future.</p>
+<p>Supporting education, healthcare and communities.</p>
 
-<a class="btn" href="#donate">Donate Now</a>
+<a class="btn" href="#donate">Support Our Mission</a>
 
 </div>
 
@@ -238,19 +290,18 @@ font-size:35px;
 
 <section id="about">
 
-<h2 class="section-title">About Us</h2>
+<h2 class="section-title">About Kruthi Foundation</h2>
 
 <div class="about">
 
-<img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+<img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53">
 
 <p>
 
-Kruthi Foundation is a charitable organization dedicated to improving
-the lives of underprivileged communities. Our initiatives focus on
-education, healthcare, and community development. Through the support
-of volunteers and donors, we strive to create meaningful and lasting
-change.
+Kruthi Foundation works to uplift underprivileged communities in India
+through education programs, healthcare initiatives, and community
+development projects. With the support of volunteers and donors we aim
+to create meaningful and lasting social impact.
 
 </p>
 
@@ -261,50 +312,41 @@ change.
 <div class="stats">
 
 <div class="stat">
-<h2>500+</h2>
-<p>Students Supported</p>
+<h2>1200+</h2>
+<p>Children Educated</p>
 </div>
 
 <div class="stat">
-<h2>30+</h2>
-<p>Health Camps</p>
+<h2>45+</h2>
+<p>Medical Camps</p>
 </div>
 
 <div class="stat">
-<h2>20+</h2>
-<p>Communities Helped</p>
+<h2>25+</h2>
+<p>Communities Supported</p>
 </div>
 
 </div>
 
 <section id="projects">
 
-<h2 class="section-title">Our Projects</h2>
+<h2 class="section-title">Our Initiatives</h2>
 
 <div class="projects">
 
 <div class="card">
-
-<h3>Education Support</h3>
-
-<p>Providing books, scholarships and mentoring programs for students.</p>
-
+<h3>Education Programs</h3>
+<p>Providing school materials and scholarships to students.</p>
 </div>
 
 <div class="card">
-
 <h3>Healthcare Camps</h3>
-
-<p>Free health checkups and medical camps for rural communities.</p>
-
+<p>Free health checkups and medicine distribution.</p>
 </div>
 
 <div class="card">
-
-<h3>Community Development</h3>
-
-<p>Empowering villages through sustainable development initiatives.</p>
-
+<h3>Women Empowerment</h3>
+<p>Skill development programs for rural women.</p>
 </div>
 
 </div>
@@ -313,27 +355,33 @@ change.
 
 <section id="gallery">
 
-<h2 class="section-title">Our Work</h2>
+<h2 class="section-title">Gallery</h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1593113598332-cd59a93f9724">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
 
-<img src="https://images.unsplash.com/photo-1529390079861-591de354faf5">
+<img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca">
 
-<img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+<img src="https://images.unsplash.com/photo-1594736797933-d0f06ba4fcd4">
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
 
 </div>
 
 </section>
 
-<section id="donate" class="donate">
+<section id="donate">
 
-<h2 class="section-title">Support Our Cause</h2>
+<div class="donate">
 
-<p>Your donations help us continue our mission.</p>
+<h2 class="section-title">Support Our Work</h2>
+
+<p>Your contribution helps us transform lives.</p>
 
 <a class="btn">Donate Now</a>
+
+</div>
 
 </section>
 
@@ -344,10 +392,8 @@ change.
 <div class="contact">
 
 <input placeholder="Your Name">
-
 <input placeholder="Email">
-
-<textarea placeholder="Your Message"></textarea>
+<textarea placeholder="Message"></textarea>
 
 <button>Send Message</button>
 
@@ -357,7 +403,7 @@ change.
 
 <footer>
 
-<p>© 2026 Kruthi Foundation | All Rights Reserved</p>
+<p>© 2026 Kruthi Foundation | Building Hope Across Communities</p>
 
 </footer>
 
