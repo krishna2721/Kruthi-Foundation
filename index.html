@@ -1,182 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Kruthi Foundation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
-background:#f4f6fb;
-color:#333;
-}
-
-/* HEADER */
-
-header{
-background:linear-gradient(90deg,#1b4de4,#4f8cff);
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-color:white;
-box-shadow:0 3px 10px rgba(0,0,0,0.15);
-}
-
-/* LOGO */
-
-.logo{
-display:flex;
-align-items:center;
-font-size:24px;
-font-weight:700;
-}
-
-.logo-circle{
-width:38px;
-height:38px;
-background:#ff6b35;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-right:10px;
-font-weight:bold;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
+font-family:'Poppins',sans-serif;
 }
 
 /* HERO */
 
 .hero{
-height:85vh;
-background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url("https://images.unsplash.com/photo-1593113598332-cd59a93f9724");
 background-size:cover;
 background-position:center;
+color:white;
 display:flex;
 align-items:center;
-justify-content:center;
 text-align:center;
-color:white;
 }
 
 .hero h1{
-font-size:52px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.btn{
-background:#ff6b35;
-padding:12px 28px;
-border-radius:30px;
-color:white;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.07);
-}
-
-/* SECTIONS */
-
-section{
-padding:70px 10%;
-}
-
-.section-title{
-text-align:center;
-font-size:34px;
-margin-bottom:40px;
+font-size:55px;
 font-weight:600;
 }
 
-/* ABOUT */
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+.btn-donate{
+background:#ff5722;
+border:none;
+padding:12px 30px;
+font-size:18px;
 }
 
 /* IMPACT */
 
-.stats{
-display:flex;
-justify-content:space-around;
-background:#1b4de4;
-color:white;
-padding:50px 0;
-text-align:center;
+.impact{
+background:#f7f7f7;
+padding:60px 0;
 }
 
-.stat h2{
-font-size:42px;
+.impact h2{
+font-weight:600;
+font-size:40px;
+color:#1a73e8;
 }
 
-/* PROJECTS */
+/* PROGRAMS */
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.program-card{
 transition:0.3s;
-text-align:center;
 }
 
-.card:hover{
+.program-card:hover{
 transform:translateY(-10px);
-box-shadow:0 15px 25px rgba(0,0,0,0.2);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* GALLERY */
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
-
 .gallery img{
-width:100%;
 border-radius:10px;
 transition:0.3s;
 }
@@ -185,39 +82,13 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* DONATE */
+/* DONATION */
 
-.donate{
-text-align:center;
-background:#eef3ff;
-border-radius:10px;
-padding:40px;
-}
-
-/* CONTACT */
-
-.contact{
-max-width:600px;
-margin:auto;
-}
-
-.contact input,
-.contact textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-border-radius:6px;
-border:1px solid #ccc;
-}
-
-.contact button{
-background:#1b4de4;
+.donation{
+background:#1a73e8;
 color:white;
-padding:12px 25px;
-border:none;
-border-radius:6px;
-margin-top:10px;
-cursor:pointer;
+padding:70px 0;
+text-align:center;
 }
 
 /* FOOTER */
@@ -225,28 +96,8 @@ cursor:pointer;
 footer{
 background:#111;
 color:white;
+padding:30px;
 text-align:center;
-padding:20px;
-margin-top:40px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.about{
-grid-template-columns:1fr;
-}
-
-.stats{
-flex-direction:column;
-gap:25px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
 }
 
 </style>
@@ -255,157 +106,215 @@ font-size:34px;
 
 <body>
 
-<header>
+<!-- NAVBAR -->
 
-<div class="logo">
-<div class="logo-circle">K</div>
-Kruthi Foundation
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold">Kruthi Foundation</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link">About</a></li>
+
+<li class="nav-item"><a class="nav-link">Programs</a></li>
+
+<li class="nav-item"><a class="nav-link">Gallery</a></li>
+
+<li class="nav-item"><a class="nav-link">Contact</a></li>
+
+</ul>
+
 </div>
 
-<nav>
-
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#gallery">Gallery</a>
-<a href="#donate">Donate</a>
-<a href="#contact">Contact</a>
+</div>
 
 </nav>
 
-</header>
+<!-- HERO -->
 
 <section class="hero">
 
-<div>
+<div class="container">
 
-<h1>Empowering Lives Across India</h1>
+<h1>Empowering Children & Communities</h1>
 
-<p>Supporting education, healthcare and communities.</p>
-
-<a class="btn" href="#donate">Support Our Mission</a>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<h2 class="section-title">About Kruthi Foundation</h2>
-
-<div class="about">
-
-<img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53">
-
-<p>
-
-Kruthi Foundation works to uplift underprivileged communities in India
-through education programs, healthcare initiatives, and community
-development projects. With the support of volunteers and donors we aim
-to create meaningful and lasting social impact.
-
+<p class="lead mt-3">
+Working towards education, healthcare and sustainable development
 </p>
 
+<button class="btn btn-donate mt-3">Donate Now</button>
+
 </div>
 
 </section>
 
-<div class="stats">
+<!-- IMPACT -->
 
-<div class="stat">
+<section class="impact text-center">
+
+<div class="container">
+
+<h3 class="mb-5">Our Impact</h3>
+
+<div class="row">
+
+<div class="col-md-4">
+
 <h2>1200+</h2>
+
 <p>Children Educated</p>
+
 </div>
 
-<div class="stat">
+<div class="col-md-4">
+
 <h2>45+</h2>
-<p>Medical Camps</p>
+
+<p>Health Camps</p>
+
 </div>
 
-<div class="stat">
+<div class="col-md-4">
+
 <h2>25+</h2>
+
 <p>Communities Supported</p>
-</div>
 
 </div>
 
-<section id="projects">
-
-<h2 class="section-title">Our Initiatives</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>Education Programs</h3>
-<p>Providing school materials and scholarships to students.</p>
-</div>
-
-<div class="card">
-<h3>Healthcare Camps</h3>
-<p>Free health checkups and medicine distribution.</p>
-</div>
-
-<div class="card">
-<h3>Women Empowerment</h3>
-<p>Skill development programs for rural women.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="gallery">
+<!-- PROGRAMS -->
 
-<h2 class="section-title">Gallery</h2>
+<section class="container py-5">
 
-<div class="gallery">
+<h3 class="text-center mb-5">Our Programs</h3>
 
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+<div class="row g-4">
 
-<img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca">
+<div class="col-md-4">
 
-<img src="https://images.unsplash.com/photo-1594736797933-d0f06ba4fcd4">
+<div class="card program-card">
 
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+<img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53"
+class="card-img-top">
+
+<div class="card-body">
+
+<h5>Education Support</h5>
+
+<p>Providing books, scholarships and mentoring.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card program-card">
+
+<img src="https://images.unsplash.com/photo-1529390079861-591de354faf5"
+class="card-img-top">
+
+<div class="card-body">
+
+<h5>Healthcare Camps</h5>
+
+<p>Free medical camps for underserved communities.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card program-card">
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+class="card-img-top">
+
+<div class="card-body">
+
+<h5>Women Empowerment</h5>
+
+<p>Skill development programs for women.</p>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section id="donate">
+<!-- GALLERY -->
 
-<div class="donate">
+<section class="container py-5">
 
-<h2 class="section-title">Support Our Work</h2>
+<h3 class="text-center mb-5">Gallery</h3>
 
-<p>Your contribution helps us transform lives.</p>
+<div class="row g-3 gallery">
 
-<a class="btn">Donate Now</a>
+<div class="col-md-3">
+<img src="https://images.unsplash.com/photo-1594736797933-d0f06ba4fcd4" class="img-fluid">
+</div>
+
+<div class="col-md-3">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" class="img-fluid">
+</div>
+
+<div class="col-md-3">
+<img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca" class="img-fluid">
+</div>
+
+<div class="col-md-3">
+<img src="https://images.unsplash.com/photo-1593113598332-cd59a93f9724" class="img-fluid">
+</div>
 
 </div>
 
 </section>
 
-<section id="contact">
+<!-- DONATION -->
 
-<h2 class="section-title">Contact Us</h2>
+<section class="donation">
 
-<div class="contact">
+<h2>Support Our Mission</h2>
 
-<input placeholder="Your Name">
-<input placeholder="Email">
-<textarea placeholder="Message"></textarea>
+<p class="mt-3">Your contribution can change lives.</p>
 
-<button>Send Message</button>
-
-</div>
+<button class="btn btn-light mt-3">Donate Now</button>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
-<p>© 2026 Kruthi Foundation | Building Hope Across Communities</p>
+<p>© 2026 Kruthi Foundation | Building Hope Across India</p>
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
